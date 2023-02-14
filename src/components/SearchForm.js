@@ -22,6 +22,7 @@ function SearchForm({addMovie}) {
     console.log(result)
     if(result.Response === "True"){
       setMovie(result)
+      setError("")
     }else{
       setError(true)
     }
