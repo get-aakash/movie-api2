@@ -13,13 +13,19 @@ const CustomCard = ({ movie = {}, removeDisplay, addMovie }) => {
         {movie?.type ? (
           <Button onClick={()=>removeDisplay(movie.imdbID)} variant='danger' className='mt-3 w-100'>Discard</Button>
         ) : 
+        <>
+       
         <div className='d-flex justify-content-between'>
           <Button variant='warning' onClick={() => addMovie({ ...movie, type: "awesome" })}>Awesome</Button>
             <Button variant='danger' onClick={() => addMovie({ ...movie, type: "boring" })}>Boring</Button>
             
-
+            
+          </div>
+          
           <Button onClick={()=>removeDisplay(movie.imdbID)} variant='danger' className='mt-3 w-100'>Discard</Button>
-          </div>}
+           </>
+          }
+          
 
 
 
